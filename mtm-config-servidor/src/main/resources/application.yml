@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/keinraf/Microservicios-KEVINRAF-MANUAL.git
+          uri: https://github.com/MarceloTorres0309/EXAMEN-MICROSERVICIOS-MARCELOTM-MTM.git
           searchPaths: config-data
           default-label: main
   security:

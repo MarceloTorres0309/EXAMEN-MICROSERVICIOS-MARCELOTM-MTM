@@ -19,13 +19,12 @@ spring:
           uri: lb://mtm-libro-service
           predicates:
             - Path=/libros/**
-        - id: mtm-prestamo-service
-          uri: lb://mtm-prestamo-service
-          predicates:
-            - Path=/prestamos/**
         - id: mtm-usuario-service
           uri: lb://mtm-usuario-service
           predicates:
             - Path=/usuarios/**
-
+        - id: mtm-prestamo-service
+          uri: lb://mtm-prestamo-service
+          predicates:
+            - Path=/prestamos/**
 
