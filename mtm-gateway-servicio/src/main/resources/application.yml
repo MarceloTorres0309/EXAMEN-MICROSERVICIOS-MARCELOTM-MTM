@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: mtm-gateway-servicio
+  profiles:
+    active: development
+  config:
+    import: optional:configserver:http://marcelotorres:marcelo0309@localhost:7070

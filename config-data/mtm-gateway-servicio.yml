@@ -1,0 +1,31 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: mtm-libro-service
+          uri: lb://mtm-libro-service
+          predicates:
+            - Path=/libros/**
+        - id: mtm-prestamo-service
+          uri: lb://mtm-prestamo-service
+          predicates:
+            - Path=/prestamos/**
+        - id: mtm-usuario-service
+          uri: lb://mtm-usuario-service
+          predicates:
+            - Path=/usuarios/**
+
+
